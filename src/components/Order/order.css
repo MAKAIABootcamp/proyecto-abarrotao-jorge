@@ -1,0 +1,9 @@
+.login_container{
+    background-color: (180deg, #FFFEFA 0%, #FFE031 0%, #FFFEFA 0.01%, #FCFCFC 100%); 
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-right: 6%;
+    padding-left: 6%;
+    width: 100%;
+    height: 100%;
+  }
