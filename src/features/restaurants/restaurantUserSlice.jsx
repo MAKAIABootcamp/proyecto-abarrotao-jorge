@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 export const restaurantUserSlice = createSlice({
-      name: 'restaurants',
+      name: 'restaurantsUser',
       initialState : [],
       reducers: {
         addRestaurantUser: (state, action) => {

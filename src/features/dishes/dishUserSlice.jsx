@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 export const dishUserSlice = createSlice({
-      name: 'dishes',
+      name: 'dishesUser',
       initialState : [],
       reducers: {
         addDishesUser: (state, action) => {

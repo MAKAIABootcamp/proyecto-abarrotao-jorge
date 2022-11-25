@@ -1,6 +1,5 @@
 import React from 'react';
 import { Carousel, DropdownButton, Dropdown, Nav } from 'react-bootstrap';
-import { FcShop, FcLike } from "react-icons/fc";
 import { GrLocation } from "react-icons/gr";
 
 
@@ -51,19 +50,6 @@ export const RestaurantListHeader = () => {
             </Carousel>
 
             <h4 style={{ marginTop:"2%", marginBottom:"2%"}}> Restaurants and cafes </h4>
-
-            <Nav variant="pills" defaultActiveKey="/" >
-            <Nav.Item > </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link href="/">All</Nav.Link>
-                </Nav.Item>
-                <Nav.Item >
-                    <Nav.Link eventKey="link-1"><FcShop /> Fast food</Nav.Link>
-                </Nav.Item>
-                <Nav.Item >
-                    <Nav.Link eventKey="link-2"><FcLike /> Pizza</Nav.Link>
-                </Nav.Item>
-            </Nav> 
         </>
     )
 };

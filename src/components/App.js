@@ -24,6 +24,7 @@ import CrudRestaurantsList from './Admin/CrudRestaurantsList';
 import CrudRestaurantsForm from './Admin/CrudRestaurantsForm';
 import CrudDishesForm from './Admin/CrudDishesForm';
 import CrudDishesList from './Admin/CrudDishesList';
+import { Search } from './Search/Search';
 
 
 function App() {
@@ -85,6 +86,9 @@ function App() {
                   } />
                   <Route path="/edit-dish/:id" element={
                     <ProtectedRoute><CrudDishesForm /></ProtectedRoute> 
+                  } />
+                  <Route path="/search" element={
+                    <ProtectedRoute><Search /></ProtectedRoute> 
                   } />
               </Routes>
             </AuthProvider> 

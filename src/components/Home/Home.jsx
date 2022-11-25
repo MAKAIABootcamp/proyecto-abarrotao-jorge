@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import  {getAuth, signOut} from "firebase/auth";
-import { Container, Button, DropdownButton, Dropdown} from "react-bootstrap";
+import { Container, Button, DropdownButton, Dropdown, Navbar, Nav } from "react-bootstrap";
 import RestaurantListHeader from '../Restaurant/RestaurantListHeader';
 import RestaurantList from '../Restaurant/RestaurantList';
 import DishesList from '../Dishes/Dishes';
@@ -9,6 +9,8 @@ import { ref, getStorage, listAll, getDownloadURL } from "firebase/storage";
 import { useAuth } from '../../context/firebaseContext';
 import { FaUserAlt } from "react-icons/fa";
 import './home.css';
+import { AiOutlineHome, AiOutlineSearch, AiOutlineRedo, AiOutlineUser } from "react-icons/ai";
+
 
 
 export const Home = ({ emailUser: emailUser }) => {
@@ -55,6 +57,19 @@ export const Home = ({ emailUser: emailUser }) => {
 
     return (
         <Container className='home_container'>
+                <Navbar bg="light" expand="lg" fixed="bottom">
+                    <Container>
+                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                        <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="me-auto">
+                            <Nav.Link href="/"><AiOutlineHome /></Nav.Link>
+                            <Nav.Link href="/search"><AiOutlineSearch /></Nav.Link>
+                            <Nav.Link href="/order"><AiOutlineRedo /></Nav.Link>
+                            <Nav.Link href="/userprofile"><AiOutlineUser /></Nav.Link>
+                        </Nav>
+                        </Navbar.Collapse>
+                    </Container>
+                </Navbar>
             {/* Datos del usuario */}
             <div style={{ display:"flex", justifyContent:"flex-end"}}>
                 <Dropdown>

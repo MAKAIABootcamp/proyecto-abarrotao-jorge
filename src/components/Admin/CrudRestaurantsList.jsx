@@ -2,34 +2,55 @@ import React from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {deleteRestaurant} from '../../features/restaurants/restaurantSlice';
 import {Link} from 'react-router-dom';
+import { useAuth } from '../../context/firebaseContext';
+import {Badge, Button, Row, Col } from 'react-bootstrap';
 
 
 function CrudRestaurantsList() {
     const restaurants = useSelector(state => state.restaurants);
     const dispatch = useDispatch();
+    const {user, logout, loading} = useAuth();
 
-     const handleDelete = (id) => {
+     const handleDelete = async (id) => {
+        //const restaurantsFetch = await deleteRestaurantFire(id);
         dispatch(deleteRestaurant(id));
-        console.log(id);
      }
     
   return (
     <div>
         <header>
-            <h1>Restaurants {restaurants.length}</h1>
-            <Link to='/create-restaurant'>Create restaurant</Link>
+            <h3>List of Restaurants </h3>
+            <p>Amount: <b>{restaurants.length}</b></p>
+            <div style={{ display:"flex", justifyContent:"flex-end"}}>
+              <Badge bg="warning" text="dark" style={{padding:"1%", marginBottom:"2%"}}>
+                <Link to='/create-restaurant' style={{fontSize:"20px"}}>Create restaurant</Link>
+              </Badge>
+            </div>
         </header>
         {restaurants.map(restaurant =>(
-           <div key={restaurant.id}>
-            <p>{restaurant.descripcion}</p>
-            <p>{restaurant.descripcionFull}</p>
-            <p>{restaurant.numStars}</p>
-            <p>{restaurant.workTime}</p>
-            <p>{restaurant.beforeyou}</p>
-            <p>{restaurant.shippingTime}</p>
-            <button onClick={() => handleDelete(restaurant.id)}>Delete</button>
-            <Link to={`/edit-restaurant/${restaurant.id}`}>Edit</Link>
-           </div>
+          <>
+          <Row key={restaurant.id} >
+              <Col>
+                  <img src={restaurant.imagen} style={{borderRadius:"10%", width:"70%", height:"70%"}} alt="restaurant"/>
+                  <p style={{alignItems:"center"}}><b>{restaurant.descripcion}</b></p>
+              </Col>
+              <Col className="col_text">
+                <p><b>Description:</b></p>
+                <p><i>{restaurant.descripcionFull}</i></p>
+              </Col>
+              <Col>
+              <p><b>Number of stars: </b> <i>{restaurant.numStars}</i></p>
+                <p><b>Work time: </b> <i>{restaurant.workTime}</i></p>
+                <p><b>Before you </b> $ <i>{restaurant.beforeyou}</i></p>
+                <p><b>Shipping time: </b> <i>{restaurant.shippingTime}</i></p>
+              </Col>
+              <Col>
+                <Button variant="danger" onClick={() => handleDelete(restaurant.id)}>Delete</Button>{'   '}
+                <Link to={`/edit-restaurant/${restaurant.id}`}>Edit</Link>
+              </Col>
+          </Row>
+          <hr />
+      </>
         ))}
     </div>
   )

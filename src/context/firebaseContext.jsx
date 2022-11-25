@@ -3,7 +3,7 @@ import { auth, firestore } from '../components/Generic/firebase-config';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, 
          signOut, GoogleAuthProvider, FacebookAuthProvider, signInWithPopup, sendPasswordResetEmail } 
          from 'firebase/auth';
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import { doc, getDoc, setDoc, deleteDoc } from "firebase/firestore";
 
 
 export const firebaseContext = createContext();
@@ -104,6 +104,15 @@ export function AuthProvider ({children}) {
         }
     }
 
+    //Delete Restaurant
+    const deleteRestaurantFire =  async (restaurantId) => {
+        const docuRef = doc(firestore, "restaurantsDb", "items", "restaurants", `${restaurantId}`);
+        console.log("docuRef " + docuRef);
+        console.log("restaurantId " + restaurantId);
+        await deleteDoc(docuRef);
+        console.log("docuRef " + docuRef);
+    }
+
     //Find Dishes
     const findDishes =  async (restaurantId) => {
         const docuRef = doc(firestore, `restaurantsDb/${restaurantId}`);
@@ -129,7 +138,7 @@ export function AuthProvider ({children}) {
 
     return (
         <firebaseContext.Provider value={{signup, login, user, logout, loading, 
-            loginWithGoogle, loginWithFacebook, resetPassword, findRestaurants, findDishes}}>
+            loginWithGoogle, loginWithFacebook, resetPassword, findRestaurants, findDishes, deleteRestaurantFire}}>
             {children}
         </firebaseContext.Provider>
     )

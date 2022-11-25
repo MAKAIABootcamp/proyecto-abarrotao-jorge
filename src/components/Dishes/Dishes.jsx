@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Container, Nav, Dropdown, Button } from 'react-bootstrap';
+import { Container, Nav, Dropdown, Button, Navbar } from 'react-bootstrap';
 import DishesList from './DishesList';
 import './dishes.css';
 import { FcRating, FcShop, FcLike } from "react-icons/fc";
@@ -10,12 +10,14 @@ import { useNavigate } from 'react-router-dom';
 import { deleteRestaurantsUser, deleteAllRestaurantsUser } from '../../features/restaurants/restaurantUserSlice';
 import { BiArrowBack } from "react-icons/bi";
 import { useDispatch } from 'react-redux';
+import { AiOutlineHome, AiOutlineSearch, AiOutlineRedo, AiOutlineUser } from "react-icons/ai";
+
 
 
 export const Dishes = ({restaurantsObject: objectRestaurant} ) => {
 
     const navigate = useNavigate();
-    const selectedRestaurant = useSelector(state => state.restaurants);
+    const selectedRestaurant = useSelector(state => state.restaurantsUser);
     const [ arrayDish, setArrayDish] = useState(null);
     const {user, logout, loading, findDishes} = useAuth();
     const [ error, setError ] = useState();
@@ -84,6 +86,19 @@ export const Dishes = ({restaurantsObject: objectRestaurant} ) => {
 
     return (
             <Container className='dishes_container'>
+                    <Navbar bg="light" expand="lg" fixed="bottom">
+                        <Container>
+                            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                            <Navbar.Collapse id="basic-navbar-nav">
+                            <Nav className="me-auto">
+                                <Nav.Link href="/"><AiOutlineHome /></Nav.Link>
+                                <Nav.Link href="/search"><AiOutlineSearch /></Nav.Link>
+                                <Nav.Link href="/order"><AiOutlineRedo /></Nav.Link>
+                                <Nav.Link href="/userprofile"><AiOutlineUser /></Nav.Link>
+                            </Nav>
+                            </Navbar.Collapse>
+                        </Container>
+                    </Navbar>
                     {/* Datos del usuario */}
                     <div style={{ display:"flex", justifyContent:"flex-end"}}>
                         <Dropdown>
