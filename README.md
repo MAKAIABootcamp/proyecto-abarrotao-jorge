@@ -1,1 +1,4 @@
-# proyecto-abarrotao-jorge
+# Proyecto Abarrotao
+
+### Autor
+[Jorge Restrepo](https://github.com/JorgeARA)
