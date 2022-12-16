@@ -16,8 +16,8 @@ function Verification() {
         <div className="content_sup">
           {/* Encabezado */}
           <img src={logo} className="img-responsive center-block d-block mx-auto" alt="imagen_logo"></img>
-          <h2 className = "mainText" > Sign in </h2>
-          <p className = "secondText">Login or create an account with your phone number to start ordering</p>
+          <h2 className = "mainText" > Ingresar </h2>
+          <p className = "secondText">Ingresa cin tu cuenta</p>
         
           {/* Campo para ingresar dato */}
           <InputGroup className="mb-3">

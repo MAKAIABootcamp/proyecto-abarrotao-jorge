@@ -11,12 +11,13 @@ export const ConfirmationOrder = () => {
     }
 
     return (
+        
         <div className="container_restaurant">
-                <img src={"https://firebasestorage.googleapis.com/v0/b/sprint4-61808.appspot.com/o/Others%2FconfirmedOrder.PNG?alt=media&token=719c134b-4513-4243-9f5a-4d4fff99d5af"} alt="confirmed">
+                <img src={"https://firebasestorage.googleapis.com/v0/b/sprint4-61808.appspot.com/o/ConfirmImg%2FTurno%20agendado%20(1).png?alt=media&token=e79640be-53e9-46f0-a378-148201b77d53"} alt="confirmed">
                 </img>
-                <h5>Order is accepted</h5>
+                <h5>Su turno ha sido agendado con éxito. Recuerde llegar a tiempo según la hora seleccionada.</h5>
 
-                <Button variant="warning" onClick={handleConfirmerOrder} >Thanks!</Button>
+                <Button variant="success" onClick={handleConfirmerOrder} >Regresar al inicio</Button>
             
         </div>
     )

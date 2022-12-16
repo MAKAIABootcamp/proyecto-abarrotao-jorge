@@ -55,7 +55,7 @@ function Admin() {
     {/* Datos del usuario */}
   <div style={{ display:"flex", justifyContent:"flex-end"}}>
     <Dropdown>
-       <Dropdown.Toggle variant="warning" id="dropdown-basic">
+       <Dropdown.Toggle variant="secondary" id="dropdown-basic">
            <FaUserAlt />  {user.displayName}
            {/* <img src={user.photoURL} alt="Foto"></img> */}
        </Dropdown.Toggle>

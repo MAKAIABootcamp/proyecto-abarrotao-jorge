@@ -98,44 +98,44 @@ export function Login() {
     return (
         <Container className="login_container">
             <Stack gap={3}>
-                <img src={logo} className="img-responsive center-block d-block mx-auto" alt="imagen_logo"></img>
-                <h2 className = "main_text">Sign in</h2>
-                <p className = "second_text">Login or create an account</p>
+                <img src="https://firebasestorage.googleapis.com/v0/b/sprint4-61808.appspot.com/o/ConfirmImg%2Flogo%20principal.png?alt=media&token=e62b189d-5d93-49fb-ac51-64598b8c03b5" className="img-responsive center-block d-block mx-auto" alt="imagen_logo"></img>
+                <h2 className = "main_text">Ingresar</h2>
+                <p className = "second_text">Ingresa con tu cuenta</p>
                 
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>E-mail address *</Form.Label>
-                        <Form.Control required name="email" type="email" placeholder="youremail@company.com" 
+                        <Form.Label>Correo *</Form.Label>
+                        <Form.Control required name="email" type="email" placeholder="correo@mail.com" 
                             onChange={handleChange}  />
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label>Password *</Form.Label>
+                        <Form.Label>Contraseña *</Form.Label>
                         <Form.Control required type="password" name="password" placeholder="******" 
                             onChange={handleChange} />
                     </Form.Group>
-                    <Button variant="warning" type="submit" style={{ width: "51%", float: "right"}}>Sign in</Button>
+                    <Button variant="info" type="submit" style={{ width: "51%", float: "right"}}>Ingresar</Button>
                 </Form>
                 
                 <div className='error-text'>{error && <p>{error}</p> }</div>
 
-                <a className='forgot_text' href="#1" onClick={handleResetPassword}>Forgot password?</a>
+                <a className='forgot_text' href="#1" onClick={handleResetPassword}>¿Olvidaste tu contraseña?</a>
 
                 <div className="buttons">
                     
                     <Button variant="light" type="submit" style={{ width: "51%", float:"right"}} onClick={handleGoogleSignin}>
-                        <FcGoogle /> Login with Google
+                        <FcGoogle /> Ingresa con Google
                     </Button>
 
                     <Button variant="light" type="submit" style={{ width: "51%", float:"right", marginTop: "2%"}} onClick={handleFacebookSignin}>
-                        <BsFacebook /> Login with Facebook
+                        <BsFacebook /> Ingresa con Facebook
                     </Button>
 
                     <Button 
                     style={{ width: "51%", float:"right", marginTop: "2%"}}
                     variant="secondary" 
                     onClick={handleRegister}>
-                        Don't have an account? Register!
+                        ¿No tienes cuenta? Regístrate
                     </Button>
                 </div>
             </Stack>

@@ -1,4 +1,5 @@
 .container_restaurant{
+  display: block;
     
   justify-content: center;
   text-align: center;  }

@@ -23,7 +23,7 @@ export const RestaurantList = ({ arrayRestaurant: restaurantArray }) => {
         <>
             <Container fluid className='container'>
                 <Stack>
-                <Navbar bg="light" expand="lg" fixed="bottom">
+                {/* <Navbar bg="light" expand="lg" fixed="bottom">
                     <Container>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
@@ -35,7 +35,7 @@ export const RestaurantList = ({ arrayRestaurant: restaurantArray }) => {
                         </Nav>
                         </Navbar.Collapse>
                     </Container>
-                </Navbar> 
+                </Navbar>  */}
                     {restaurantArray.map((restaurantObject, index) => {
                         return (
                             <>
@@ -45,9 +45,9 @@ export const RestaurantList = ({ arrayRestaurant: restaurantArray }) => {
                                     </Col>
                                     <Col className="col_text">
                                         <p className='desc_text'>{restaurantObject.description}</p>
-                                        <p className='rating_text'><FcRating /> {restaurantObject.numStars}</p>
+                                        <p className='rating_text'> {restaurantObject.numStars}</p>
                                         <p className='work_time_text'>{restaurantObject.workTime}</p>
-                                        <p>Before you <b>{restaurantObject.beforeyou}</b></p>
+                                        
                                     </Col>
                                 </Row>
                                 <hr />

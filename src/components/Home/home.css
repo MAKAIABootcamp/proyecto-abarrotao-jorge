@@ -1,6 +1,23 @@
 .home_container{
-    background-color: (180deg, #FFFEFA 0%, #FFE031 0%, #FFFEFA 0.01%, #FCFCFC 100%); 
+    background-color:#e2e2e2; 
     width: 100%;
     height: 100%;
-    margin-top: 5%;
+    margin-top: 0%;
   }
+
+  .header_home{
+    width: 100%;
+    height: 15%;
+    background-color: #9aac41;
+    display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin: 0%;
+   padding: 2%;
+  }
+
+  h2{
+    font-family: 'Carter One', cursive;
+  }
+
+ 

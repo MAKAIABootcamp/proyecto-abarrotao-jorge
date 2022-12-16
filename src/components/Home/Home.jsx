@@ -56,8 +56,32 @@ export const Home = ({ emailUser: emailUser }) => {
     )
 
     return (
+        
+
+
         <Container className='home_container'>
-                <Navbar bg="light" expand="lg" fixed="bottom">
+            <header className='header_home'>
+               
+                <picture>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/sprint4-61808.appspot.com/o/Others%2FLogo_final__1_-removebg-preview.png?alt=media&token=1805d976-f117-4d79-b8bd-17383c6a9866" alt="" />
+                </picture>
+                <h2>Atienda</h2>
+            <div style={{ display:"flex", justifyContent:"flex-end"}}>
+                <Dropdown>
+                    <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+                        <FaUserAlt />  {user.displayName}
+                        {/* <img src={user.photoURL} alt="Foto"></img> */}
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                        <Dropdown.Item as="button" onClick={handleUserProfile}>Settings</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={handleLogout}>Sign out</Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
+            </div>
+           
+            </header>
+
+                {/* <Navbar bg="light" expand="lg" fixed="bottom">
                     <Container>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
@@ -69,20 +93,9 @@ export const Home = ({ emailUser: emailUser }) => {
                         </Nav>
                         </Navbar.Collapse>
                     </Container>
-                </Navbar>
+                </Navbar> */}
             {/* Datos del usuario */}
-            <div style={{ display:"flex", justifyContent:"flex-end"}}>
-                <Dropdown>
-                    <Dropdown.Toggle variant="warning" id="dropdown-basic">
-                        <FaUserAlt />  {user.displayName}
-                        {/* <img src={user.photoURL} alt="Foto"></img> */}
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                        <Dropdown.Item as="button" onClick={handleUserProfile}>Settings</Dropdown.Item>
-                        <Dropdown.Item as="button" onClick={handleLogout}>Sign out</Dropdown.Item>
-                    </Dropdown.Menu>
-                </Dropdown>
-            </div>
+            
 
             {/* Render del header */}
             <RestaurantListHeader />

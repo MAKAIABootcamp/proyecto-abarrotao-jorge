@@ -68,40 +68,40 @@ export function Register() {
     return (
         <Container className="login_container">
             <Stack gap={3}>
-                <img src={logo} className="img-responsive center-block d-block mx-auto" alt="imagen_logo"></img>
-                <h2 className = "main_text">Sign up</h2>
-                <p className = "second_text">Create an account</p>
+                <img src="https://firebasestorage.googleapis.com/v0/b/sprint4-61808.appspot.com/o/ConfirmImg%2Flogo%20principal.png?alt=media&token=e62b189d-5d93-49fb-ac51-64598b8c03b5" className="img-responsive center-block d-block mx-auto" alt="imagen_logo"></img>
+                <h2 className = "main_text">Registrarse</h2>
+                <p className = "second_text">Crear una cuenta</p>
                 
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>E-mail address *</Form.Label>
-                        <Form.Control required name="email" type="email" placeholder="youremail@company.com" onChange={handleChange} />
+                        <Form.Label>Correo *</Form.Label>
+                        <Form.Control required name="email" type="email" placeholder="correo@mail.com" onChange={handleChange} />
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label>Password *</Form.Label>
+                        <Form.Label>Contraseña *</Form.Label>
                         <Form.Control required name="password" type="password" placeholder="******" onChange={handleChange}/>
                     </Form.Group>
                     
-                    <Button variant="warning" type="submit" style={{ width: "51%", float: "right"}}>Sign up</Button>
+                    <Button variant="info" type="submit" style={{ width: "51%", float: "right"}}>Regístrate</Button>
                 </Form>
                 <p className='error-text'>{error && <p>{error}</p> }</p>
 
                 <div className="buttons">
                     
                     <Button variant="light" type="submit" style={{ width: "51%", float:"right"}} onClick={handleGoogleSignup}>
-                        <FcGoogle /> Register with Google
+                        <FcGoogle /> Registro con Google
                     </Button>
 
                     <Button variant="light" type="submit" style={{ width: "51%", float:"right", marginTop: "2%"}} onClick={handleFacebookSignup}>
-                        <BsFacebook /> Register with Facebook
+                        <BsFacebook /> Registro con Facebook
                     </Button>
 
                     <Button 
                     style={{ width: "51%", float:"right", marginTop: "2%"}}
                     variant="secondary" 
                     onClick={handleLogin}>
-                        Do you have an account? Sign in!
+                        ¿Tienes una cuenta? Ingresa
                     </Button>
 
                 </div>

@@ -6,14 +6,14 @@ import { GrLocation } from "react-icons/gr";
 export const RestaurantListHeader = () => {
     return (
         <>
-            <DropdownButton id="dropdown-item-button" title="82 Well St, New-York" 
+            {/* <DropdownButton id="dropdown-item-button" title="82 Well St, New-York" 
                 style={{ marginBottom:"2%"}}
                 variant="light">
                     <Dropdown.Item><GrLocation /> 12 - 82 8th Street</Dropdown.Item>
                     <Dropdown.Item as="button"><GrLocation /> 46 - 23 8th Street </Dropdown.Item>
-            </DropdownButton>
+            </DropdownButton> */}
 
-            <Carousel >
+            {/* <Carousel >
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
@@ -47,9 +47,9 @@ export const RestaurantListHeader = () => {
                         </p>
                     </Carousel.Caption>
                 </Carousel.Item>
-            </Carousel>
+            </Carousel> */}
 
-            <h4 style={{ marginTop:"2%", marginBottom:"2%"}}> Restaurants and cafes </h4>
+            <h4 style={{ marginTop:"2%", marginBottom:"2%"}}> Elige tu tieda. Apoya el comercio local local </h4>
         </>
     )
 };

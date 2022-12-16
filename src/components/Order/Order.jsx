@@ -33,13 +33,13 @@ export const Order = () => {
     return (
         <Container fluid className='login_container'>
         <Stack>
-            <h3>Deliver to</h3>
+            {/* <h3>Deliver to</h3>
             <DropdownButton id="dropdown-item-button" title="82 Well St, New-York" 
                 style={{ marginBottom:"2%"}}
                 variant="light">
                     <Dropdown.Item><GrLocation /> 12 - 82 8th Street</Dropdown.Item>
                     <Dropdown.Item as="button"><GrLocation /> 46 - 23 8th Street </Dropdown.Item>
-            </DropdownButton>
+            </DropdownButton> */}
 
             <h3 style={{ marginTop:"1%"}}> Payment </h3>
 
