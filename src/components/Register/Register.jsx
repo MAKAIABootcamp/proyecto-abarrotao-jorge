@@ -73,7 +73,7 @@ export function Register() {
                     <img src="https://firebasestorage.googleapis.com/v0/b/sprint4-61808.appspot.com/o/Others%2FLogo_final__1_-removebg-preview.png?alt=media&token=1805d976-f117-4d79-b8bd-17383c6a9866" alt="" />
                 </picture>
                 <h1>Atienda</h1>
-                <h5> Su tienda favorita en casa</h5>
+                <h5> Tu tienda favorita en casa</h5>
                </div>
            
             </header>
@@ -93,7 +93,7 @@ export function Register() {
                         <Form.Control required name="password" type="password" placeholder="******" onChange={handleChange}/>
                     </Form.Group>
                     
-                    <Button variant="info" type="submit" style={{ width: "51%", float: "right"}}>Regístrate</Button>
+                    <Button variant="secondary" type="submit" style={{ width: "51%", float: "right"}}>Registrarse</Button>
                 </Form>
                 <p className='error-text'>{error && <p>{error}</p> }</p>
 

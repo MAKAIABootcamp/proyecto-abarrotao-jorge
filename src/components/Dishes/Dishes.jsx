@@ -120,7 +120,7 @@ export const Dishes = ({ restaurantsObject: objectRestaurant }) => {
                     <img src="https://firebasestorage.googleapis.com/v0/b/sprint4-61808.appspot.com/o/Others%2FLogo_final__1_-removebg-preview.png?alt=media&token=1805d976-f117-4d79-b8bd-17383c6a9866" alt="" />
                 </picture>
                 <h1>Atienda</h1>
-                <h5> Su tienda favorita en casa</h5>
+                <h5> Tu tienda favorita en casa</h5>
                </div>
                 
             <div style={{ display:"flex", justifyContent:"flex-end"}}>

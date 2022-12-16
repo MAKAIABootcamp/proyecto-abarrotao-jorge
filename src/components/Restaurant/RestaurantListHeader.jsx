@@ -49,7 +49,7 @@ export const RestaurantListHeader = () => {
                 </Carousel.Item>
             </Carousel> */}
 
-            <h4 style={{ marginTop:"2%", marginBottom:"2%"}}> Elige tu tieda. Apoya el comercio local local </h4>
+            <h4 style={{ marginTop:"2%", marginBottom:"2%"}}> Elige tu tienda. Apoya el comercio local</h4>
         </>
     )
 };
