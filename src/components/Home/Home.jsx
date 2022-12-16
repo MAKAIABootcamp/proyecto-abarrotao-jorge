@@ -7,9 +7,10 @@ import DishesList from '../Dishes/Dishes';
 import { useNavigate } from 'react-router-dom';
 import { ref, getStorage, listAll, getDownloadURL } from "firebase/storage";
 import { useAuth } from '../../context/firebaseContext';
-import { FaUserAlt } from "react-icons/fa";
+import { FaUserAlt, } from "react-icons/fa";
 import './home.css';
 import { AiOutlineHome, AiOutlineSearch, AiOutlineRedo, AiOutlineUser } from "react-icons/ai";
+import { SiFacebook, SiInstagram, SiWhatsapp } from "react-icons/si";
 
 
 
@@ -33,7 +34,7 @@ export const Home = ({ emailUser: emailUser }) => {
     const handleUserProfile = () => {
         setError('');
         try{
-            navigate("/userprofile");
+            navigate("/");
         } catch (error) {
             setError(error.message);
         }
@@ -61,11 +62,14 @@ export const Home = ({ emailUser: emailUser }) => {
 
         <Container className='home_container'>
             <header className='header_home'>
-               
-                <picture>
+               <div className='logo_container'>
+               <picture>
                     <img src="https://firebasestorage.googleapis.com/v0/b/sprint4-61808.appspot.com/o/Others%2FLogo_final__1_-removebg-preview.png?alt=media&token=1805d976-f117-4d79-b8bd-17383c6a9866" alt="" />
                 </picture>
-                <h2>Atienda</h2>
+                <h1>Atienda</h1>
+                <h5> Su tienda favorita en casa</h5>
+               </div>
+                
             <div style={{ display:"flex", justifyContent:"flex-end"}}>
                 <Dropdown>
                     <Dropdown.Toggle variant="secondary" id="dropdown-basic">
@@ -73,8 +77,8 @@ export const Home = ({ emailUser: emailUser }) => {
                         {/* <img src={user.photoURL} alt="Foto"></img> */}
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                        <Dropdown.Item as="button" onClick={handleUserProfile}>Settings</Dropdown.Item>
-                        <Dropdown.Item as="button" onClick={handleLogout}>Sign out</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={handleUserProfile}>Ir a inicio</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={handleLogout}>Salir</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
             </div>
@@ -102,6 +106,9 @@ export const Home = ({ emailUser: emailUser }) => {
 
             {/* Render del listado de restaurantes */}
             {arrayRestaurant ? <RestaurantList arrayRestaurant={arrayRestaurant} /> : null}
+            <footer className='footer_home'>
+                <h5>Síguenos en redes sociales: <SiFacebook/> <SiInstagram/> <SiWhatsapp/></h5>
+            </footer>
         </Container>
     );
 };

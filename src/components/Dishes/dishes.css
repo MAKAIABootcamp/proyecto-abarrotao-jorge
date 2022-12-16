@@ -1,5 +1,5 @@
 .dishes_container{
-  background-color: (180deg, #FFFEFA 0%, #FFE031 0%, #FFFEFA 0.01%, #FCFCFC 100%); 
+  background-color: #FBE6C2; 
   width: 100%;
   height: 100%;
   margin-top: 0%;
@@ -65,4 +65,33 @@ border-bottom-left-radius: 10%;
 border-top-left-radius: 10%;
 border-top-right-radius: 10%;
 align-content: center;
+}
+
+.header_home{
+  width: 100%;
+  height: 15%;
+  background-color: #F48B29;
+  display: flex;
+ align-items: center;
+ justify-content: space-between;
+ margin: 0%;
+ padding: 2%;
+}
+
+h1{
+  font-family: 'Carter One', cursive;
+}
+
+.logo_container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.footer_home{
+  width: 100%;
+  height: 15%;
+  background-color: #F48B29;
+  padding: 2%;
 }

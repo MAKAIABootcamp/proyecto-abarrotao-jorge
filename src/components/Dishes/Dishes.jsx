@@ -20,6 +20,7 @@ import {
   AiOutlineUser,
 } from "react-icons/ai";
 import { FcCellPhone, FcManager, FcOk } from "react-icons/fc";
+import { SiFacebook, SiInstagram, SiWhatsapp } from "react-icons/si";
 
 export const Dishes = ({ restaurantsObject: objectRestaurant }) => {
   const navigate = useNavigate();
@@ -47,7 +48,7 @@ export const Dishes = ({ restaurantsObject: objectRestaurant }) => {
   const handleUserProfile = () => {
     setError("");
     try {
-      navigate("/userprofile");
+      navigate("/");
     } catch (error) {
       setError(error.message);
     }
@@ -114,11 +115,14 @@ export const Dishes = ({ restaurantsObject: objectRestaurant }) => {
       </Navbar> */}
       {/* Datos del usuario */}
       <header className='header_home'>
-               
-                <picture>
+               <div className='logo_container'>
+               <picture>
                     <img src="https://firebasestorage.googleapis.com/v0/b/sprint4-61808.appspot.com/o/Others%2FLogo_final__1_-removebg-preview.png?alt=media&token=1805d976-f117-4d79-b8bd-17383c6a9866" alt="" />
                 </picture>
-                <h2>Atienda</h2>
+                <h1>Atienda</h1>
+                <h5> Su tienda favorita en casa</h5>
+               </div>
+                
             <div style={{ display:"flex", justifyContent:"flex-end"}}>
                 <Dropdown>
                     <Dropdown.Toggle variant="secondary" id="dropdown-basic">
@@ -126,8 +130,8 @@ export const Dishes = ({ restaurantsObject: objectRestaurant }) => {
                         {/* <img src={user.photoURL} alt="Foto"></img> */}
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                        <Dropdown.Item as="button" onClick={handleUserProfile}>Settings</Dropdown.Item>
-                        <Dropdown.Item as="button" onClick={handleLogout}>Sign out</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={handleUserProfile}>Ir a inicio</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={handleLogout}>Salir</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
             </div>
@@ -183,6 +187,9 @@ export const Dishes = ({ restaurantsObject: objectRestaurant }) => {
         </Form.Group>
         {arrayDish ? <DishesList arrayDish={arrayDish} /> : null}
       </div>
+      <footer className='footer_home'>
+                <h5>Síguenos en redes sociales: <SiFacebook/> <SiInstagram/> <SiWhatsapp/></h5>
+            </footer>
     </Container>
   );
 };
