@@ -1,20 +1,20 @@
 
 .login_container{
     background-color: (180deg, #FFFEFA 0%, #FFE031 0%, #FFFEFA 0.01%, #FCFCFC 100%); 
-    padding-top: 5%;
-    padding-bottom: 5%;
-    padding-right: 6%;
-    padding-left: 6%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    padding-right: 0%;
+    padding-left: 0%;
     width: 100%;
     height: 100%;
   }
   
   .content_sup{
     background-color: (180deg, #FFFEFA 0%, #FFE031 0%, #FFFEFA 0.01%, #FCFCFC 100%); 
-    padding-top: 5%;
-    padding-bottom: 5%;
-    padding-right: 6%;
-    padding-left: 6%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    padding-right: 0%;
+    padding-left: 0%;
     width: 100%;
     height: 100%;
     align-items: start;
@@ -57,3 +57,6 @@
     color: #cf2424;
   }
   
+.footer_home{
+  margin-top: 2%;
+}

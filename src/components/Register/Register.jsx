@@ -67,6 +67,16 @@ export function Register() {
 
     return (
         <Container className="login_container">
+            <header className='header_home'>
+               <div className='logo_container'>
+               <picture>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/sprint4-61808.appspot.com/o/Others%2FLogo_final__1_-removebg-preview.png?alt=media&token=1805d976-f117-4d79-b8bd-17383c6a9866" alt="" />
+                </picture>
+                <h1>Atienda</h1>
+                <h5> Su tienda favorita en casa</h5>
+               </div>
+           
+            </header>
             <Stack gap={3}>
                 <img src="https://firebasestorage.googleapis.com/v0/b/sprint4-61808.appspot.com/o/ConfirmImg%2Flogo%20principal.png?alt=media&token=e62b189d-5d93-49fb-ac51-64598b8c03b5" className="img-responsive center-block d-block mx-auto" alt="imagen_logo"></img>
                 <h2 className = "main_text">Registrarse</h2>
