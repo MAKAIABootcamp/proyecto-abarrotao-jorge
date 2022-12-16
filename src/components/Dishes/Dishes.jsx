@@ -19,7 +19,7 @@ import {
   AiOutlineRedo,
   AiOutlineUser,
 } from "react-icons/ai";
-import { FcCellPhone, FcManager } from "react-icons/fc";
+import { FcCellPhone, FcManager, FcOk } from "react-icons/fc";
 
 export const Dishes = ({ restaurantsObject: objectRestaurant }) => {
   const navigate = useNavigate();
@@ -160,6 +160,10 @@ export const Dishes = ({ restaurantsObject: objectRestaurant }) => {
                   <p>
                     {" "}
                     <FcCellPhone /> {restaurant.shippingTime}
+                  </p>
+                  <p>
+                    {" "}
+                    <FcOk /> {restaurant.beforeyou}
                   </p>
                 </div>
               </div>
