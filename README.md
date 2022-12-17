@@ -21,5 +21,8 @@ https://github.com/MAKAIABootcamp/proyecto-abarrotao-jorge.git
 Instalación de las dependencias
 npm install
 
+Inicia el proyecto con:
+npm start 
+
 Autor
 [Jorge Andrés Restrepo](https://github.com/JorgeARA)
